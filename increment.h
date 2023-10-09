@@ -1,5 +1,5 @@
-double increment(float a, float b, unsigned int N)
+double increment(double timeStart, double timeEnd, unsigned int numberOfSteps)
 {
 
-    return (double)((b - a) / N);
+    return ((timeEnd - timeStart) / numberOfSteps);
 }
