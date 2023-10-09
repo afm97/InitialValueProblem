@@ -1,8 +1,8 @@
 typedef struct
 {
-    float a;
-    float b;
-    unsigned N;
-    float y_0;
+    double timeStart;
+    double timeEnd;
+    unsigned int NumberOfSteps;
+    float initialCondition;
 
 } boundaryConditions;
