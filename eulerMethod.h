@@ -1,17 +1,16 @@
 double func(double y, double t);
 
-double eulerMethod(double *solution, double timeStart, double step, unsigned int maxOfSteps)
+double eulerMethod(unsigned int numberOfSteps, double timeStart, double step, double solution[numberOfSteps + 1])
 {
-    unsigned int iterator = 1;
+    unsigned int iterator = 0;
 
     do
     {
-
-        solution[iterator] = solution[iterator - 1] + step * func(solution[iterator - 1], timeStart);
-
         timeStart = iterator * step;
+
+        solution[iterator + 1] = solution[iterator] + step * func(solution[iterator], timeStart);
 
         iterator++;
 
-    } while (iterator <= maxOfSteps);
+    } while (iterator <= numberOfSteps);
 }
