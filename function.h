@@ -1,5 +1,8 @@
-double func(double point)
-{
+#include <stdio.h>
+#include <stdlib.h>
 
-    return (pow(point, 2));
+double func(double y, double time)
+{
+    printf("y = %f, t = %f\n", y, time);
+    return (y - pow(time, 2) + 1);
 }
