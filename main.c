@@ -16,12 +16,10 @@ int main()
 
     double step = increment(problem.timeStart, problem.timeEnd, problem.NumberOfSteps);
 
-    double *result = malloc(sizeof(double) * (problem.NumberOfSteps + 1));
+    double result[problem.NumberOfSteps + 1];
     result[0] = problem.initialCondition;
 
-    eulerMethod(result, problem.timeStart, step, problem.NumberOfSteps + 1);
+    eulerMethod(problem.NumberOfSteps + 1, problem.timeStart, step, result);
 
     printArray(problem.NumberOfSteps + 1, result);
-    free(result);
-    result = NULL;
 }
