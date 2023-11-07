@@ -1,4 +1,4 @@
-double func(double y, double t);
+double func(double t, double y);
 
 double eulerMethod(unsigned int numberOfSteps, double timeStart, double step, double solution[numberOfSteps + 1])
 {
