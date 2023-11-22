@@ -1,6 +1,6 @@
 double func(double t, double y);
 
-double rungeKuttaHighOrderMethod(unsigned int numberOfSteps, double timeStart, double step, double solution[numberOfSteps + 1])
+double rungeKuttaHighOrderMethod(unsigned int numberOfSteps, double timeStart, double step, double solution[numberOfSteps + 1][2])
 {
     double K_1, K_2, K_3, K_4, K_5, K_6, currentTime, y0;
     unsigned int iterator = 1;
