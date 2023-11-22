@@ -1,10 +1,9 @@
-void printMatrix(int rows, int cols, float matrix[rows][cols]){
+#include <stdio.h>
+
+void printMatrix(int rows, double matrix[rows][2])
+{
     for (int i = 0; i < rows; i++)
     {
-        for(int j = 0; j < cols; j++)
-        {
-            printf("%f     ", matrix[i][j]);
-        }
-        printf("\n");
+        printf("%f, %f \n", matrix[i][0], matrix[i][1]);
     }
 }
