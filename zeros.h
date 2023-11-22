@@ -1,8 +1,11 @@
-float zeros(int rows, double array[rows])
+float zeros(int rows, int cols, double matrix[rows][cols])
 {
 
     for (int i = 0; i < rows; i++)
     {
-        array[i] = 0.0;
+        for (int j = 0; j < cols; j++)
+        {
+            matrix[i][j] = 0.0;
+        }
     }
 }
