@@ -19,7 +19,7 @@ double rungeKuttaHighOrderMethod(unsigned int numberOfSteps, double timeStart, d
         K_6 = func(currentTime + step / 2, y0 + (8 * K_5 - 12 * K_4 + 12 * K_3 + 2 * K_2 - 3 * K_1) * step / 7);
 
         solution[iterator][0] = currentTime;
-        solution[iterator + 1] = y0 + (7 * K_1 + 32 * K_3 + 12 * K_4 + 32 * K_5 + 7 * K_6) * step / 90;
+        solution[iterator][1] = y0 + (7 * K_1 + 32 * K_3 + 12 * K_4 + 32 * K_5 + 7 * K_6) * step / 90;
 
         iterator++;
 
